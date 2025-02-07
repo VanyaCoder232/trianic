@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="главная"
+        android:icon="@drawable/icon_home"
+        />
+    <item
+        android:id="@+id/info"
+        android:title="инфо"
+        android:icon="@drawable/icon_info"
+        />
+    <item
+        android:id="@+id/settings"
+        android:title="настройки"
+        android:icon="@drawable/icon_settings"
+    />
+</menu>
