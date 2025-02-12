@@ -11,6 +11,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.example.appsolvetriangles.databinding.MainActivityBinding
 import com.example.appsolvetriangles.ui.theme.AppSolveTrianglesTheme
 
@@ -21,11 +23,19 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
     }
+
+
+    fun openFrag(opFrag:Fragment , place: Int){
+        
+
+
+    }
+
+
 
 }
 

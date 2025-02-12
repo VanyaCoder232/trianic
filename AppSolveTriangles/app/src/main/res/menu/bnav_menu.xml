@@ -3,17 +3,20 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/home"
-        android:title="главная"
         android:icon="@drawable/icon_home"
+        android:title="@string/home"
+        android:orderInCategory="1"
         />
     <item
         android:id="@+id/info"
-        android:title="инфо"
-        android:icon="@drawable/icon_info"
+        android:icon="@android:drawable/btn_star_big_on"
+        android:title="@string/info"
+        android:orderInCategory="2"
         />
     <item
         android:id="@+id/settings"
-        android:title="настройки"
         android:icon="@drawable/icon_settings"
-    />
+        android:title="@string/settings"
+        android:orderInCategory="3"
+        />
 </menu>
