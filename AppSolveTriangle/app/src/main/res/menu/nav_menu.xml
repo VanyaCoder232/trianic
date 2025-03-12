@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view" >
+
+
+    <item android:title="Вычисления">
+        <menu>
+            <item
+                android:title="Решение треугольников"
+                android:id="@+id/menu_item_solve_trian"
+                android:icon="@drawable/ic_android_24"
+            />
+            <item
+                android:title="Калькулятор"
+                android:id="@+id/menu_item_calcu"
+                android:icon="@drawable/ic_android_24"
+            />
+            <item
+                android:title="Конвертер град. и рад."
+                android:id="@+id/menu_item_conv_deg_rad"
+                android:icon="@drawable/ic_android_24"
+            />
+            <item
+                android:title="Простые числа"
+                android:id="@+id/menu_item_prime_numbers"
+                android:icon="@drawable/ic_android_24"
+            />
+        </menu>
+    </item>
+
+    <item android:title="Прочее">
+        <menu>
+            <item
+                android:title="@string/settings"
+                android:id="@+id/menu_item_settings"
+                android:icon="@drawable/icon_settings"
+                />
+            <item
+                android:title="@string/info"
+                android:id="@+id/menu_item_info"
+                android:icon="@drawable/icon_info"
+                />
+
+        </menu>
+    </item>
+
+</menu>

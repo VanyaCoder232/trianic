@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">AppSolveTriangles</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 
     <!--For conv_deg_rad_frag-->
     <string name="degrees">Градусы</string>
@@ -14,7 +17,7 @@
     <string name="A">A</string>
     <string name="B">B</string>
     <string name="C">C</string>
-    <string name="Solve_triangle">Решить треугольник</string>
+    <string name="Solve_triangle">  Решить треугольник  </string>
 
     <!--For calcu_frag-->
     <string name="b1">1</string>
@@ -53,6 +56,13 @@
 
     <!--For app_info_frag-->
     <string name="info">инфо</string>
+    <string name="main_info">
+       Это мобильное приложение было создано для решения треугольников,
+        конвертации градусов и радианов, и пр. вычислений.
+        Цель данного приложения - создание проекта для начинающего разработчика,
+        это приложение очень небольшое и мне, как автору, было приятно его разрабатывать.
+
+    </string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
@@ -70,6 +80,8 @@
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="home">главная</string>
 
-    <string name="settings">Настройки</string>
+    <string name="settings">настройки</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

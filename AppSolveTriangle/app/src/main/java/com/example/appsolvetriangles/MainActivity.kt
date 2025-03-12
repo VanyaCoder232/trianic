@@ -14,8 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.replace
 import com.example.appsolvetriangles.databinding.MainActivityBinding
-import com.example.appsolvetriangles.ui.theme.AppSolveTrianglesTheme
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
@@ -25,16 +25,21 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+
+
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
     }
 
 
-    fun openFrag(opFrag:Fragment , place: Int){
-        
 
-
+    //Функция открытия фрагмента для удобства
+    fun openFrag(openingFrag:Fragment , place: Int){
+        supportFragmentManager.
+            beginTransaction().
+            replace(place, openingFrag).
+            commit()
     }
 
 
