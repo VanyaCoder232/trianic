@@ -3,7 +3,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view" >
+     >
 
 
     <item android:title="Вычисления">
@@ -11,22 +11,22 @@
             <item
                 android:title="Решение треугольников"
                 android:id="@+id/menu_item_solve_trian"
-                android:icon="@drawable/ic_android_24"
+                android:icon="@drawable/icon_solve_triangle"
             />
             <item
                 android:title="Калькулятор"
                 android:id="@+id/menu_item_calcu"
-                android:icon="@drawable/ic_android_24"
+                android:icon="@drawable/icon_calculate"
             />
             <item
                 android:title="Конвертер град. и рад."
                 android:id="@+id/menu_item_conv_deg_rad"
-                android:icon="@drawable/ic_android_24"
+                android:icon="@drawable/icon_convert_degs_rads"
             />
             <item
                 android:title="Простые числа"
                 android:id="@+id/menu_item_prime_numbers"
-                android:icon="@drawable/ic_android_24"
+                android:icon="@drawable/icon_2357"
             />
         </menu>
     </item>

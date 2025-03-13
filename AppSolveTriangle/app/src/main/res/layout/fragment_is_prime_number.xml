@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".IsPrimeNumberFragment">
 
     <?xml version="1.0" encoding="utf-8"?>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/material_dynamic_neutral90">
@@ -24,9 +23,11 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/InputIsPrimeNumber"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:hint="число"
+                android:inputType="number"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -40,7 +41,7 @@
             app:layout_constraintGuide_percent="0.35" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/tvIsPrimeNum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
@@ -62,21 +63,34 @@
             app:layout_constraintTop_toTopOf="@+id/guideline">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/LimitPrimNums"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:hint="Простые числа до:"
+                android:inputType="number"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/tvPrintPrimeNums"
             android:layout_width="260dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="20dp"
             android:background="@color/material_dynamic_neutral70"
             android:text="Тут выведутся простые числа до:"
             android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/bPrintPrimeNums"
+            app:layout_constraintStart_toStartOf="@+id/bPrintPrimeNums"
+            app:layout_constraintTop_toBottomOf="@+id/bPrintPrimeNums" />
+
+        <Button
+            android:id="@+id/bPrintPrimeNums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@android:color/holo_green_light"
+            android:text="Вывести"
             app:layout_constraintEnd_toEndOf="@+id/textInputLayout8"
             app:layout_constraintStart_toStartOf="@+id/textInputLayout8"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout8" />
