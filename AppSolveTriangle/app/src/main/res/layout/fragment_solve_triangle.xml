@@ -37,7 +37,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tVforErrs">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/Input_a"
+                android:id="@+id/Input_sa"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:hint="@string/a"
@@ -76,7 +76,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/Input_b"
+                android:id="@+id/Input_sb"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:hint="hint"
@@ -116,7 +116,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout5">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/Input_c"
+                android:id="@+id/Input_sc"
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:hint="@string/c"
