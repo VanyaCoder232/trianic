@@ -23,10 +23,35 @@ class SolveTriangleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.apply {
             bSolveIt.setOnClickListener {
-                var a:Double = 0.0; var b:Double = 0.0; var c:Double = 0.0;
-                var A:Double = 0.0; var B:Double = 0.0; var C:Double = 0.0;
-                
+                var a: Double = 0.0;
+                var b: Double = 0.0;
+                var c: Double = 0.0;
+                var A: Double = 0.0;
+                var B: Double = 0.0;
+                var C: Double = 0.0;
 
+                if (!InputSa.text.isNullOrEmpty())
+                    a = InputSa.text.toString().toDouble()
+                if (!InputSb.text.isNullOrEmpty())
+                    b = InputSb.text.toString().toDouble()
+                if (!InputSc.text.isNullOrEmpty())
+                    c = InputSc.text.toString().toDouble()
+                if (!InputA.text.isNullOrEmpty())
+                    A = InputA.text.toString().toDouble()
+                if (!InputB.text.isNullOrEmpty())
+                    B = InputB.text.toString().toDouble()
+                if (!InputC.text.isNullOrEmpty())
+                    C = InputC.text.toString().toDouble()
+
+                if (isCorrectVars(a, b, c, A, B, C)) {
+                    var T: Triangle = Solve_Triangle(a, b, c, A, B, C)
+                    InputSa.setText(String.format("%.5f", T.side_a))
+                    InputSb.setText(String.format("%.5f", T.side_b))
+                    InputSc.setText(String.format("%.5f", T.side_c))
+                    InputA.setText(String.format("%.5f", T.A))
+                    InputB.setText(String.format("%.5f", T.B))
+                    InputC.setText(String.format("%.5f", T.C))
+                }
             }
         }
     }
@@ -34,7 +59,6 @@ class SolveTriangleFragment : Fragment() {
         @JvmStatic
         fun newInstance() = SolveTriangleFragment()
     }
-
     fun degrees(rads:Double):Double {
         return rads * 57.29577951308232
     }
@@ -42,14 +66,10 @@ class SolveTriangleFragment : Fragment() {
         return degs / 57.29577951308232
     }
 
-    fun IsCorrectVars(_a:Double , _b:Double, _c: Double,
+    fun isCorrectVars(_a:Double , _b:Double, _c: Double,
                        _A:Double, _B:Double, _C:Double):Boolean{
-        var a = _a
-        var b = _b
-        var c = _c
-        var A = _A
-        var B = _B
-        var C = _C
+        var a = _a; var b = _b; var c = _c
+        var A = _A; var B = _B; var C = _C
 
         binding.apply {
             // Проверка на отрицательность и число введённых элементов
@@ -75,7 +95,6 @@ class SolveTriangleFragment : Fragment() {
         }
         return true
     }
-
     fun Solve_Triangle( _a:Double , _b:Double, _c: Double,
                         _A:Double, _B:Double, _C:Double ) : Triangle{
 // Создание изменяемых переменных т.к. аргументы, переданные в ф-цию

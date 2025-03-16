@@ -23,7 +23,7 @@ class IsPrimeNumberFragment : Fragment() {
 
         binding.apply {
 
-            if(! InputIsPrimeNumber.text.toString().isNullOrEmpty()){
+            if(! InputIsPrimeNumber.text.isNullOrEmpty()){
                 var num = InputIsPrimeNumber.text.toString().toInt()
                 if (isNumPrime(num))
                     tvIsPrimeNum.text = "Число простое"
@@ -32,9 +32,8 @@ class IsPrimeNumberFragment : Fragment() {
             }
 
             bPrintPrimeNums.setOnClickListener{
-                if ( LimitPrimNums.text.toString().isNullOrEmpty())
-                    Toast.makeText(this@IsPrimeNumberFragment, "Введите число выше", Toast.LENGTH_LONG)
-                        .show()
+                if ( LimitPrimNums.text.isNullOrEmpty())
+                    LimitPrimNums.error = "Введите число"
                 else{
                     var str:String = reshetoEratosfena(LimitPrimNums.text.toString().toInt())
                                     .toString()
@@ -66,14 +65,15 @@ class IsPrimeNumberFragment : Fragment() {
     fun reshetoEratosfena(n:Int):List<Int>{
         var i:Int = 2
         var j:Int = 0
-        var A = (2..n).filter { it % 2 != 0 }.toMutableList()
+        var A = (2..n).toMutableList()
         while (i*i <=n){
             if (A[i] !=0){
                 j = 2*i
-                for (j in (2*i)..(n+1) step i){
+                for (j in (2*i)..(n) step i){
                     A[j] = 0
                 }
             }
+            i++
         }
         val B = A.filter { it !=0 }
         return B

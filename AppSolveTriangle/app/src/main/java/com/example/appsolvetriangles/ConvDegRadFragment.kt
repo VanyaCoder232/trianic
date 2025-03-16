@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.appsolvetriangles.databinding.FragmentConvDegRadBinding
 
 class ConvDegRadFragment : Fragment() {
@@ -21,12 +22,18 @@ class ConvDegRadFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding.apply {
             bRadToDeg.setOnClickListener{
-                InputDegs.setText(
-                    degrees(InputRads.getText().toString().toDouble()) .toString()
-                )
+                if(InputRads.text.isNullOrEmpty())
+                    InputRads.error = "Введите число"
+                else
+                    InputDegs.setText(
+                        degrees(InputRads.getText().toString().toDouble()).toString()
+                        )
             }
             bDegToRad.setOnClickListener{
-                InputRads.setText(
+                if (InputDegs.text.isNullOrEmpty())
+                    InputDegs.error = "Введите число"
+                else
+                    InputRads.setText(
                     radians(InputDegs.getText().toString().toDouble()) .toString()
                 )
             }
