@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IsPrimeNumberFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/material_dynamic_neutral90">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:background="@color/material_dynamic_neutral70"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/InputIsPrimeNumber"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="число"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:background="@color/black"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35" />
+
+        <TextView
+            android:id="@+id/tvIsPrimeNum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@color/material_dynamic_neutral70"
+            android:text="Введите число"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tInputLayUl"
+            android:layout_width="176dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="25dp"
+            android:background="@color/material_dynamic_neutral70"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/UpLimPrimNums"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:hint="@string/Prime_Nums_to"
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvPrintPrimeNums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:background="@color/material_dynamic_neutral70"
+            android:text="@string/here_will_print_prime_nums"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+        <Button
+            android:id="@+id/bPrintPrimeNums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="130dp"
+            android:background="@android:color/holo_green_light"
+            android:text="@string/print"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tInputLayLl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/LowLimPrimNums"
+                android:layout_width="165dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/Prime_Nums_from"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/bClearNums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/Clear"
+            android:textColor="@color/black"
+            app:cornerRadius="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+        <TextView
+            android:id="@+id/tvCountNums"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/material_dynamic_neutral70"
+            android:text="@string/And_how_many_them"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/tvPrintPrimeNums"
+            app:layout_constraintStart_toStartOf="@+id/tvPrintPrimeNums"
+            app:layout_constraintTop_toBottomOf="@+id/tvPrintPrimeNums" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

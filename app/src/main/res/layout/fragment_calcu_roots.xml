@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalcuRootsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/bClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/Clear"
+            android:textColor="@color/black"
+            app:cornerRadius="0dp"
+            app:layout_constraintEnd_toEndOf="@+id/bFindFourthEl"
+            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintStart_toStartOf="@+id/bFindFourthEl"
+            app:layout_constraintTop_toBottomOf="@+id/bFindFourthEl" />
+
+        <TextView
+            android:id="@+id/tvForErrs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:background="@color/material_dynamic_neutral70"
+            android:text="A * n√B = X"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edForA"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginBottom="120dp"
+            android:ems="10"
+            android:hint="A"
+            android:inputType="number"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/bFindFourthEl"
+            app:layout_constraintEnd_toEndOf="@+id/bFindFourthEl" />
+
+        <EditText
+            android:id="@+id/edForN"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginBottom="30dp"
+            android:ems="10"
+            android:hint="n"
+            android:inputType="number"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/bFindFourthEl"
+            app:layout_constraintEnd_toEndOf="@+id/bFindFourthEl" />
+
+        <EditText
+            android:id="@+id/edForB"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginBottom="120dp"
+            android:ems="10"
+            android:hint="B"
+            android:inputType="number"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/bFindFourthEl"
+            app:layout_constraintStart_toStartOf="@+id/bFindFourthEl" />
+
+        <EditText
+            android:id="@+id/edForX"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginBottom="30dp"
+            android:ems="10"
+            android:hint="X"
+            android:inputType="number"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toTopOf="@+id/bFindFourthEl"
+            app:layout_constraintStart_toStartOf="@+id/bFindFourthEl" />
+
+        <Button
+            android:id="@+id/bFindFourthEl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:text="Найти 4-й элемент"
+            android:textColor="@color/black"
+            app:cornerRadius="0dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvForErrs"
+            app:layout_constraintStart_toStartOf="@+id/tvForErrs"
+            app:layout_constraintTop_toBottomOf="@+id/tvForErrs" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
