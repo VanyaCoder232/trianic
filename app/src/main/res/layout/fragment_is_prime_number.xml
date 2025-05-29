@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/material_dynamic_neutral90">
+        android:background="@color/white">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputLayout2"
@@ -53,7 +53,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tInputLayUl"
-            android:layout_width="176dp"
+            android:layout_width="159dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
             android:layout_marginEnd="25dp"
@@ -64,8 +64,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/UpLimPrimNums"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:hint="@string/Prime_Nums_to"
+                android:layout_height="wrap_content"
+                android:hint="@string/PrNums_Ulim"
                 android:inputType="number"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black" />
@@ -97,7 +97,7 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tInputLayLl"
-            android:layout_width="wrap_content"
+            android:layout_width="156dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginTop="50dp"
@@ -106,9 +106,9 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/LowLimPrimNums"
-                android:layout_width="165dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="@string/Prime_Nums_from"
+                android:hint="@string/PrNums_Llim"
                 android:inputType="number" />
         </com.google.android.material.textfield.TextInputLayout>
 

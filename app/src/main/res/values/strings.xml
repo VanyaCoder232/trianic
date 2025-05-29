@@ -95,9 +95,9 @@
     <string name="Clear">Очистить</string>
     <string name="print">Вывести</string>
     <string name="here_will_print_prime_nums">Тут выведутся простые числа</string>
-    <string name="Prime_Nums_from">Простые числа с:</string>
-    <string name="Prime_Nums_to">Простые числа до:</string>
-    <string name="And_how_many_them">И сколько их</string>
+    <string name="PrNums_Llim">Нижний предел:</string>
+    <string name="PrNums_Ulim">Верхний предел:</string>
+    <string name="And_how_many_them">Их количество</string>
     <string name="a_sup_n_sup_b_x"><![CDATA[A * <sup>n</sup>√B = X]]></string>
 
 </resources>

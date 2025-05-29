@@ -14,6 +14,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.replace
@@ -41,6 +43,7 @@ class MainActivity : AppCompatActivity() {
                     R.id.menu_item_info -> openFrag(AppInfoFragment.newInstance())
                     R.id.menu_item_settings -> Toast.makeText(this@MainActivity,"В разработке :D",Toast.LENGTH_LONG).show()
                 }
+                drawerLayout.closeDrawer(GravityCompat.START)
                 true
             }
         }

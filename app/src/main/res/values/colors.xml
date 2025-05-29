@@ -8,4 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="material_dynamic_neutral99">#FEFBFF</color>
+    <color name="material_dynamic_neural90">#FFE2E2E9</color>
+    <color name="material_dynamic_neutral70">#FFABABB1</color>
 </resources>
