@@ -70,11 +70,21 @@ class IsPrimeNumberFragment : Fragment() {
 
                 override fun afterTextChanged(s: Editable?) {
                     if (!InputIsPrimeNumber.text.isNullOrEmpty()){
-                        var num = InputIsPrimeNumber.text.toString().toInt()
-                        if (isNumPrime(num))
+                        var num = InputIsPrimeNumber.text.toString().toULong()
+
+                        if (num==0UL)
+                            tvIsPrimeNum.text = "Введите число"
+                        else if (num==1UL)
+                            tvIsPrimeNum.text = "Число 1 НИ простое, НИ составное"
+                        //Я хз, шо с функцией isPrimeNumber(), но она думает, что 2- составное число. Задрало в край
+                        else if (num==2UL)
                             tvIsPrimeNum.text = "Число простое"
-                        else
-                            tvIsPrimeNum.text = "Число cоставное"
+                        else {
+                            if (isNumPrime(num))
+                                tvIsPrimeNum.text = "Число простое"
+                            else
+                                tvIsPrimeNum.text = "Число cоставное"
+                        }
                     } else {
                         tvIsPrimeNum.setText("Введите число")
                     }
@@ -90,15 +100,15 @@ class IsPrimeNumberFragment : Fragment() {
     }
 
 
-    fun isNumPrime(num:Int):Boolean {
-        if (num%2 ==0)
+    fun isNumPrime(num:ULong):Boolean {
+        if (num%2UL ==0UL)
             return false
         else{
-            var i: Int = 3
+            var i: ULong = 3UL
             while (i * i <= num) {
-                if (num % i ==0)
+                if (num % i ==0UL)
                     return false
-                i = i+2
+                i += 2UL
             }
             return true
         }
@@ -118,7 +128,6 @@ class IsPrimeNumberFragment : Fragment() {
             }
             i++
         }
-        val B = A.slice(Llim..A.size-1).filter { it !=0 }
-        return B
+        return A.slice(Llim..Ulim).filter { it!=0 }
     }
 }

@@ -29,47 +29,44 @@ class CalcuRootsFragment : Fragment() {
         binding.apply {
             bFindFourthEl.setOnClickListener{
                 var counter = 0
-                for (edtxt in listOf(edForA,edForB,edForN,edForX)){
+                for (edtxt in listOf(EdA,EdB,EdN,EdX)){
                     if (!edtxt.text.isNullOrEmpty())
                         counter++
                 }
-                if (counter<3){
+                if (counter!=3){
                     tvForErrs.setText("Введите 3 элемента")
-                }
-                else if (counter==4){
-                    tvForErrs.setText("Введите РОВНО 3 элемента для нахождения 4-го")
                 }
                 else{
                     var A:Double = 0.0; var B:Double = 0.0;
                     var N:Double = 0.0; var X:Double = 0.0;
-                    if (!edForA.text.isNullOrEmpty())
-                        A = edForA.text.toString().toDouble()
-                    if (!edForB.text.isNullOrEmpty())
-                        B = edForB.text.toString().toDouble()
-                    if (!edForN.text.isNullOrEmpty())
-                        N = edForN.text.toString().toDouble()
-                    if (!edForX.text.isNullOrEmpty())
-                        X = edForX.text.toString().toDouble()
+                    if (!EdA.text.isNullOrEmpty())
+                        A = EdA.text.toString().toDouble()
+                    if (!EdB.text.isNullOrEmpty())
+                        B = EdB.text.toString().toDouble()
+                    if (!EdN.text.isNullOrEmpty())
+                        N = EdN.text.toString().toDouble()
+                    if (!EdX.text.isNullOrEmpty())
+                        X = EdX.text.toString().toDouble()
 
                     if (N%2==0.0 && B<=0.0)
                         tvForErrs.setText("Корень четной степени из числа <0")
                     else{
                         if (X==0.0)
-                            edForX.setText(String.format("%.5f",A * Math.pow(B ,1.0/N )))
+                            EdX.setText(String.format("%.5f",A * Math.pow(B ,1.0/N )))
                         else if (A==0.0)
-                            edForA.setText(String.format("%.5f",X / Math.pow(B ,1.0/N )))
+                            EdA.setText(String.format("%.5f",X / Math.pow(B ,1.0/N )))
                         else if (B==0.0)
-                            edForB.setText(String.format("%.5f",Math.pow(X/A,N)))
+                            EdB.setText(String.format("%.5f",Math.pow(X/A,N)))
                         else if (N==0.0)
-                            edForN.setText(String.format("%.5f",1/log(X/A , B)))
+                            EdN.setText(String.format("%.5f",1/log(X/A , B)))
                     }
                 }
             }
             bClear.setOnClickListener{
-                edForA.setText("")
-                edForB.setText("")
-                edForX.setText("")
-                edForN.setText("")
+                EdA.setText("")
+                EdB.setText("")
+                EdX.setText("")
+                EdN.setText("")
                 tvForErrs.setText("A * n√B = X")
             }
         }

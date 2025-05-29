@@ -39,6 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:hint="@string/a"
+                android:inputType="number"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -58,6 +59,7 @@
                 android:layout_width="100dp"
                 android:layout_height="56dp"
                 android:hint="@string/A"
+                android:inputType="number"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -77,6 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:hint="@string/b"
+                android:inputType="number"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -96,6 +99,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:hint="@string/B"
+                android:inputType="number"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -115,6 +119,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:hint="@string/c"
+                android:inputType="number"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -133,6 +138,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="56dp"
                 android:hint="@string/C"
+                android:inputType="number"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
