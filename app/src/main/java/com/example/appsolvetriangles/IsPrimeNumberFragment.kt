@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.collection.intFloatMapOf
 import com.example.appsolvetriangles.databinding.FragmentIsPrimeNumberBinding
 
 class IsPrimeNumberFragment : Fragment() {
@@ -76,9 +77,6 @@ class IsPrimeNumberFragment : Fragment() {
                             tvIsPrimeNum.text = "Введите число"
                         else if (num==1UL)
                             tvIsPrimeNum.text = "Число 1 НИ простое, НИ составное"
-                        //Я хз, шо с функцией isPrimeNumber(), но она думает, что 2- составное число. Задрало в край
-                        else if (num==2UL)
-                            tvIsPrimeNum.text = "Число простое"
                         else {
                             if (isNumPrime(num))
                                 tvIsPrimeNum.text = "Число простое"
@@ -101,14 +99,16 @@ class IsPrimeNumberFragment : Fragment() {
 
 
     fun isNumPrime(num:ULong):Boolean {
-        if (num%2UL ==0UL)
+        if (num==2UL || num ==3UL)
+            return true
+        else if((num%2UL ==0UL) || (num%3UL==0UL)|| (num<=1UL))
             return false
         else{
-            var i: ULong = 3UL
+            var i: ULong = 5UL
             while (i * i <= num) {
-                if (num % i ==0UL)
+                if (  (num % i ==0UL)||(num%(i+2UL)==0UL)  )
                     return false
-                i += 2UL
+                i += 6UL
             }
             return true
         }
