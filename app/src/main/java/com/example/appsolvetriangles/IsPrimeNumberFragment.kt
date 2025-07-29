@@ -9,9 +9,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.collection.intFloatMapOf
+import androidx.core.view.marginEnd
 import com.example.appsolvetriangles.databinding.FragmentIsPrimeNumberBinding
 
 class IsPrimeNumberFragment : Fragment() {
+
+    private var widthOfFragment = 0
     private var _binding: FragmentIsPrimeNumberBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
@@ -24,6 +27,7 @@ class IsPrimeNumberFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        this.widthOfFragment = binding.ConstrainLayFragIsPrimeNum.width
 
         binding.apply {
             bPrintPrimeNums.setOnClickListener{

@@ -48,17 +48,27 @@ class CalcuRootsFragment : Fragment() {
                     if (!EdX.text.isNullOrEmpty())
                         X = EdX.text.toString().toDouble()
 
-                    if (N%2==0.0 && B<=0.0)
-                        tvForErrs.setText("Корень четной степени из числа <0")
+                    if(B<0.0 && A!=0.0) {
+                        if (N % 2 == 0.0 && N != 0.0)
+                            tvForErrs.setText("Корень четной степени из числа <0")
+                        else if (N % 2 == 1.0) {
+                            EdX.setText(roundTo(-1.0 * A * Math.pow(-B, 1.0 / N), 6).toString())
+                        }else if (N==0.0){
+                            if (X/A>0.0)
+                                tvForErrs.setText("Корень числа <0 больше 0? Классно решили затестить")
+                            else if (X/A<0.0)
+                                EdN.setText(   roundTo(1/log(-1*X/A , -B),6).toString()  )
+                        }
+                    }
                     else{
                         if (X==0.0)
-                            EdX.setText(String.format("%.5f",A * Math.pow(B ,1.0/N )))
+                            EdX.setText(roundTo(A * Math.pow(B ,1.0/N ),6).toString())
                         else if (A==0.0)
-                            EdA.setText(String.format("%.5f",X / Math.pow(B ,1.0/N )))
+                            EdA.setText(roundTo(X / Math.pow(B ,1.0/N ),6).toString())
                         else if (B==0.0)
-                            EdB.setText(String.format("%.5f",Math.pow(X/A,N)))
+                            EdB.setText(roundTo(Math.pow(X/A,N),6).toString())
                         else if (N==0.0)
-                            EdN.setText(String.format("%.5f",1/log(X/A , B)))
+                            EdN.setText(roundTo(1/log(X/A , B),6).toString())
                     }
                 }
             }

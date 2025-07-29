@@ -46,12 +46,12 @@ class SolveTriangleFragment : Fragment() {
 
                 if (isCorrectVars(a, b, c, A, B, C)) {
                     val T: Triangle = Solve_Triangle(a, b, c, A, B, C)
-                    InputSa.setText(String.format("%.5f", T.side_a))
-                    InputSb.setText(String.format("%.5f", T.side_b))
-                    InputSc.setText(String.format("%.5f", T.side_c))
-                    InputA.setText(String.format("%.5f", T.A))
-                    InputB.setText(String.format("%.5f", T.B))
-                    InputC.setText(String.format("%.5f", T.C))
+                    InputSa.setText(roundTo(T.side_a,6).toString())
+                    InputSb.setText(roundTo(T.side_b,6).toString())
+                    InputSc.setText(roundTo(T.side_c,6).toString())
+                    InputA.setText(roundTo(T.A,6).toString())
+                    InputB.setText(roundTo(T.B,6).toString())
+                    InputC.setText(roundTo(T.C,6).toString())
                 }
             }
             bClearData.setOnClickListener{
